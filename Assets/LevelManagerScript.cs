@@ -5,12 +5,18 @@ public class LevelManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		LoadLevelAdditive ("Wave1");
+		Debug.Log ("hello world");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Time.fixedTime > 3.0f) {
+			Transform level = this.transform.Find("Wave1");
+			if(level) {
+				level.parent = null;
+			}
+		}
 	}
 
 	/* 
