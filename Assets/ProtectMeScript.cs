@@ -8,7 +8,8 @@ public class ProtectMeScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		manager = FindObjectOfType<GameManagerScript> ();
-		manager.Protects++;
+		if (manager)
+			manager.Protects++;
 	}
 	
 	// Update is called once per frame
@@ -27,6 +28,7 @@ public class ProtectMeScript : MonoBehaviour {
 
 	public void Kill() {
 		Destroy (gameObject);
-		manager.Protects--;
+		if (manager)
+			manager.Protects--;
 	}
 }
