@@ -16,6 +16,8 @@ public class GameManagerScript : MonoBehaviour {
 
 	private Animator animator;
 
+	public bool moveMissiles = false;
+
 	
 	public int Enemies;
 
@@ -39,26 +41,28 @@ public class GameManagerScript : MonoBehaviour {
 		Debug.Log ("endgame");
 	}
 
-	public void StartLevel() {
-		state = Gamestate.Playing;
-		color.update = false;
-		players.update = false;
-		depth.update = false;
-		levels.LoadLevelAdditive ("Wave1");
-	}
 
 	public int currentLevel=1;
 	public void NextLevel() {
-		levels.LoadLevelAdditive ("Wave"+currentLevel++);
+		//levels.LoadLevelAdditive ("Wave"+currentLevel++);
+		// Activate missiles here
+		Debug.Log ("Activate missiles");
+		moveMissiles = true;
 		color.update = false;
 		players.update = false;
 		depth.update = false;
 	}
 
 	public void EndLevel() {
+		moveMissiles = false;
 		color.update = true;
 		players.update = true;
 		depth.update = true;
+		StartLoadingLevel ();
+	}
+
+	public void StartLoadingLevel() {
+		levels.LoadLevelAdditive ("Wave"+currentLevel++);
 		animator.SetTrigger ("loadNextLevel");
 	}
 
@@ -80,13 +84,13 @@ public class GameManagerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.F1)){
+		/*if(Input.GetKeyDown(KeyCode.F1)){
 			NextLevel();
 		}
 
 		if(Input.GetKeyDown(KeyCode.F2)){
 			EndLevel();
-		}
+		}*/
 
 	}
 }

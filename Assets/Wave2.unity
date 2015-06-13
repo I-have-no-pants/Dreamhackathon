@@ -134,6 +134,10 @@ Prefab:
       propertyPath: m_Name
       value: Missile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
@@ -184,6 +188,10 @@ Prefab:
       propertyPath: m_Name
       value: Missile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
@@ -229,6 +237,10 @@ Prefab:
     - target: {fileID: 5837196, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: m_Radius
       value: .610000014
+      objectReference: {fileID: 0}
+    - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
@@ -279,6 +291,10 @@ Prefab:
     - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: m_Name
       value: Missile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
