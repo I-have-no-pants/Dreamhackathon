@@ -51,9 +51,9 @@ public class ImageFuser : MonoBehaviour {
 				img[pix].b = 0;
 				img[pix].a = 0;
 			} else {
-				img[pix].r = c_t[pix].r;
-				img[pix].g = c_t[pix].g;
-				img[pix].b = c_t[pix].b;
+				img[pix].r = p_t[pix].r;
+				img[pix].g = p_t[pix].g;
+				img[pix].b = p_t[pix].b;
 				img[pix].a = 255;
 
 			}
