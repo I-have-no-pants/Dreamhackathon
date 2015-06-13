@@ -10,6 +10,7 @@ public class GameManagerScript : MonoBehaviour {
 	public enum Gamestate {Menu, Playing, Death};
 	public Gamestate state = Gamestate.Menu;
 
+	public int score;
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +24,23 @@ public class GameManagerScript : MonoBehaviour {
 		depth.update = true;
 	}
 
+	public void JumpToEndgame() {
+		state = Gamestate.Death;
+	}
+
 	public void StartLevel() {
 		state = Gamestate.Playing;
 		color.update = false;
 		players.update = false;
 		depth.update = false;
+	}
+
+	public int Protects;
+	public void Death() {
+		Protects--;
+		if (Protects <= 0) {
+			JumpToEndgame();
+		}
 	}
 	
 	// Update is called once per frame
