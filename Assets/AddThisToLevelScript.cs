@@ -7,7 +7,8 @@ public class AddThisToLevelScript : MonoBehaviour {
 	void Start () {
 		// This is needed to properly destroy the object when the level is destroyed.
 		GameObject levelManager = GameObject.Find ("LevelManager");
-		this.transform.parent = levelManager.transform;
+		Transform level = levelManager.transform.Find ("Wave1"); // change this string l8r.
+		this.transform.parent = level;
 	}
 	
 	// Update is called once per frame

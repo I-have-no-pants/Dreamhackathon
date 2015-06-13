@@ -6,7 +6,7 @@ public class LevelManagerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		LoadLevelAdditive ("Wave1");
-		Debug.Log ("hello world");
+		Debug.Log ("Loading scene Wave1");
 	}
 	
 	// Update is called once per frame
@@ -14,7 +14,8 @@ public class LevelManagerScript : MonoBehaviour {
 		if (Time.fixedTime > 3.0f) {
 			Transform level = this.transform.Find("Wave1");
 			if(level) {
-				level.parent = null;
+				Destroy(level.gameObject);
+				Debug.Log("Unloading scene Wave1");
 			}
 		}
 	}
