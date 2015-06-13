@@ -74,11 +74,23 @@ public class CollisionManager : MonoBehaviour {
 
 	public void removePixel(Vector2 pixel, int radius) {
 		//Vector2 p = new Vector2((int)pixel.x,(int)pixel.y);
-		int min = Mathf.Max(0,(int)pixel.x-radius);
-		int max = Mathf.Min(sizeX,(int)pixel.x+radius);
-		for (int i=min;i<max;i++) {
-			p_tex.SetPixel(i, (int)pixel.y,Color.black);
+		int minX = Mathf.Max(0,(int)pixel.x-radius);
+		int maxX = Mathf.Min(sizeX,(int)pixel.x+radius);
+		int minY = Mathf.Max(0,(int)pixel.y-radius);
+		int maxY = Mathf.Min(sizeX,(int)pixel.y+radius);
+		for (int i=minX;i<maxX;i++) {
+			for (int j=minY;j<maxY;j++) {
+				if (isInCircle(pixel,radius,i,j))
+					p_tex.SetPixel(i, j,Color.black);
+			}
 		}
 		p_tex.Apply();
+	}
+
+	bool isInCircle(Vector2 pixel, float radius, int x, int y) {
+		float r = Mathf.Sqrt(Mathf.Pow(pixel.x-x,2)+Mathf.Pow(pixel.y-y,2));
+		if (r < radius)
+			return true;
+		return false;
 	}
 }
