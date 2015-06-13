@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BadRocketScript : MonoBehaviour {
+public class EnemyScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,9 +13,7 @@ public class BadRocketScript : MonoBehaviour {
 	
 	}
 
-
-
 	public void Explode() {
-
+		Destroy (gameObject);
 	}
 }

@@ -12,4 +12,17 @@ public class ProtectMeScript : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		EnemyScript e = coll.gameObject.GetComponent<EnemyScript>();
+		if (e) {
+			Kill ();
+			e.Explode();
+
+		}
+	}
+
+	public void Kill() {
+		Destroy (gameObject);
+	}
 }

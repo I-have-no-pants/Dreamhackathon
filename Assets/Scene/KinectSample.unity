@@ -682,7 +682,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587300933}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &587300937
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1784,7 +1784,7 @@ AreaEffector2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1570668791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -2160,8 +2160,9 @@ GameObject:
   - 4: {fileID: 1721513302}
   - 33: {fileID: 1721513301}
   - 23: {fileID: 1721513300}
-  - 114: {fileID: 1721513299}
   - 58: {fileID: 1721513298}
+  - 50: {fileID: 1721513303}
+  - 114: {fileID: 1721513299}
   m_Layer: 5
   m_Name: BadRocket
   m_TagString: Untagged
@@ -2178,7 +2179,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
@@ -2190,7 +2191,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721513297}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d544058244b9f2843a33873abb2a6cb8, type: 3}
+  m_Script: {fileID: 11500000, guid: a3aae05513233124abe4af99bcf8d7b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!23 &1721513300
@@ -2231,11 +2232,27 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1721513297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.85000002, z: 1.09399998}
+  m_LocalPosition: {x: .699999988, y: 3.36999989, z: 1.09399998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!50 &1721513303
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1721513297}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1777227017
 GameObject:
   m_ObjectHideFlags: 0
