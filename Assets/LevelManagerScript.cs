@@ -6,7 +6,6 @@ public class LevelManagerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		LoadLevelAdditive ("Wave1");
-		Debug.Log ("Loading scene Wave1");
 	}
 	
 	// Update is called once per frame
@@ -14,8 +13,7 @@ public class LevelManagerScript : MonoBehaviour {
 		if (Time.fixedTime > 3.0f) {
 			Transform level = this.transform.Find("Wave1");
 			if(level) {
-				Destroy(level.gameObject);
-				Debug.Log("Unloading scene Wave1");
+				UnloadLevelAdditive("Wave1");
 			}
 		}
 	}
@@ -39,13 +37,12 @@ public class LevelManagerScript : MonoBehaviour {
 		level.name = levelName;
 
 		Application.LoadLevelAdditive (levelName);
+		Debug.Log ("Loading scene " + levelName);
 	}
 
 	void UnloadLevelAdditive(string levelName) {
 		Transform level = this.transform.FindChild (levelName);
-
-		// The level is now an orphan. This will cause it to be destroyed, since no
-		// other object refers to it.
-		level.parent = null;
+		Destroy(level.gameObject);
+		Debug.Log("Unloading scene " + levelName);
 	}
 }
