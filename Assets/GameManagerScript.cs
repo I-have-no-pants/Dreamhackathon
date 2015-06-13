@@ -21,11 +21,13 @@ public class GameManagerScript : MonoBehaviour {
 		state = Gamestate.Menu;
 		color.update = true;
 		players.update = true;
+		Debug.Log ("menu");
 		depth.update = true;
 	}
 
 	public void JumpToEndgame() {
 		state = Gamestate.Death;
+		Debug.Log ("endgame");
 	}
 
 	public void StartLevel() {

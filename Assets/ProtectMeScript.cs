@@ -3,9 +3,12 @@ using System.Collections;
 
 public class ProtectMeScript : MonoBehaviour {
 
+	private GameManagerScript manager;
+
 	// Use this for initialization
 	void Start () {
-	
+		manager = FindObjectOfType<GameManagerScript> ();
+		manager.Protects++;
 	}
 	
 	// Update is called once per frame
@@ -24,5 +27,6 @@ public class ProtectMeScript : MonoBehaviour {
 
 	public void Kill() {
 		Destroy (gameObject);
+		manager.Protects--;
 	}
 }
