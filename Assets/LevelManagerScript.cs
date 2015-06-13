@@ -16,6 +16,13 @@ public class LevelManagerScript : MonoBehaviour {
 				UnloadLevelAdditive("Wave1");
 			}
 		}
+
+		if (Time.fixedTime > 6.0f) {
+			if(!this.transform.Find ("Wave2")) {
+				LoadLevelAdditive("Wave2");
+			}
+
+		}
 	}
 
 	/* 
