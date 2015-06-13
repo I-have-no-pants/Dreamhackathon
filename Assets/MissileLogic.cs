@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class MissileLogic : MonoBehaviour {
-	public Vector3 velocity;
+	public float speed;
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +10,7 @@ public class MissileLogic : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += velocity * Time.deltaTime;
+		transform.position += speed * transform.right * Time.deltaTime;
+
 	}
 }
