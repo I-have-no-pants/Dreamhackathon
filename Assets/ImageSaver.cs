@@ -1,47 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using System.IO;
 
 public class ImageSaver : MonoBehaviour
 {
-	public string image;
-	public int w;
-	public int h;
-	WWW www;
-		
-	void Start ()
-	{
-		//StartCoroutine (SaveTexture ("bar", "bar"));
-	}
+	public string imageType;
+	public string saveFile;
+	public int w = 320;
+	public int h = 240;
 		
 	public void SaveTexture (string imageName, string saveAs)
 	{
 		Texture2D tex = GetComponent<Renderer>().material.mainTexture as Texture2D;
 		byte[] byteArray;
-		//WWW www = new WWW ("file:" + Application.dataPath + "/Resources/" + imageName + ".png");
-		//yield return www;
-			
-		//if (www.texture != null) {
-		//	print ("success");
-		//}
-		//tex = www.texture;
+
 		byteArray = tex.EncodeToPNG ();
 			
 		string temp = Convert.ToBase64String (byteArray);
 		Debug.Log (temp);
 
-		image = temp;
+		//File.ReadAllText
+		File.WriteAllText(saveFile+imageType, temp);
+
 		w = tex.width;
 		h = tex.height;
-		/*
-		PlayerPrefs.SetString (saveAs, temp);      /// save it to file if u want.
-		PlayerPrefs.SetInt (saveAs + "_w", tex.width);
-		PlayerPrefs.SetInt (saveAs + "_h", tex.height);*/
 	}
 		
 	public Texture2D RetriveTexture (string savedImageName)
 	{
-		string temp = image; //PlayerPrefs.GetString (savedImageName);
+		string temp = File.ReadAllText (saveFile+imageType);
 			
 		int width = w; //PlayerPrefs.GetInt (savedImageName + "_w");
 		int height = h; //PlayerPrefs.GetInt (savedImageName + "_h");
@@ -66,7 +54,5 @@ public class ImageSaver : MonoBehaviour
 			GetComponent<Renderer>().material.mainTexture = RetriveTexture ("");
 			Debug.Log ("Load");
 		}
-
-		//test = RetriveTexture ("bar");
 	}
 }
