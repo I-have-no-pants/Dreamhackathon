@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Wave1.unity
   - enabled: 1
     path: Assets/Wave2.unity
+  - enabled: 1
+    path: Assets/Wave3.unity

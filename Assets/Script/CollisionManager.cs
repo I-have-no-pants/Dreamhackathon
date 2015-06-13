@@ -65,6 +65,8 @@ public class CollisionManager : MonoBehaviour {
 	}
 
 	public bool getCollision(Vector2 pixel) {
+		if (!p_tex)
+			return false;
 		Color color = p_tex.GetPixel((int)pixel.x,(int)pixel.y);
 		if (color.r != 0 || color.g != 0 || color.b != 0) {
 			return true;

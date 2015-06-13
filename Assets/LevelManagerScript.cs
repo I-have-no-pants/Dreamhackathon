@@ -5,31 +5,19 @@ public class LevelManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		LoadLevelAdditive ("Wave1");
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.fixedTime > 3.0f) {
-			Transform level = this.transform.Find("Wave1");
-			if(level) {
-				UnloadLevelAdditive("Wave1");
-			}
-		}
 
-		if (Time.fixedTime > 6.0f) {
-			if(!this.transform.Find ("Wave2")) {
-				LoadLevelAdditive("Wave2");
-			}
-
-		}
 	}
 
 	/* 
 	 * Load a new level additively, i.e. you don't destroy the objects in the current scene.
 	 * This method also keeps track of which objects that were loaded, so they can be unloaded additivenly later.
 	 */
-	void LoadLevelAdditive (string levelName) {
+	public void LoadLevelAdditive (string levelName) {
 		/* 
 		 * Create a new game object and let it's parent be the LevelManager.
 		 * ALL the objects in the scene that's loading will look up this object and
@@ -47,7 +35,7 @@ public class LevelManagerScript : MonoBehaviour {
 		Debug.Log ("Loading scene " + levelName);
 	}
 
-	void UnloadLevelAdditive(string levelName) {
+	public void UnloadLevelAdditive(string levelName) {
 		Transform level = this.transform.FindChild (levelName);
 		Destroy(level.gameObject);
 		Debug.Log("Unloading scene " + levelName);
