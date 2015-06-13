@@ -3,7 +3,10 @@ using System.Collections;
 
 [RequireComponent(typeof(Renderer))]
 public class DisplayColor : MonoBehaviour {
+
+	public bool update = true;
 	
+
 	public DeviceOrEmulator devOrEmu;
 	private Kinect.KinectInterface kinect;
 	
@@ -20,7 +23,7 @@ public class DisplayColor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (kinect.pollColor())
+		if (update && kinect.pollColor())
 		{
 			//tex.SetPixels32(kinect.getColor());
 			tex.SetPixels32(mipmapImg(kinect.getColor(),640,480));
