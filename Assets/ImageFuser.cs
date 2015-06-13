@@ -15,6 +15,7 @@ public class ImageFuser : MonoBehaviour {
 
 	public int sizeX = 320;
 	public int sizeY = 240;
+	public int displayDepth = 126;
 	
 	private Renderer renderer;
 
@@ -44,7 +45,7 @@ public class ImageFuser : MonoBehaviour {
 		{
 			int x = pix %sizeX;
 			int y = pix /sizeX;
-			if (p_t[pix].r == 0 && p_t[pix].g == 0 && p_t[pix].b == 0) {
+			if ((p_t[pix].r == 0 && p_t[pix].g == 0 && p_t[pix].b == 0) || d_t[pix].r < displayDepth) {
 				
 				img[pix].r = 0;
 				img[pix].g = 0;
