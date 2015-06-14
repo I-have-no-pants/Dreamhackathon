@@ -88,10 +88,10 @@ public class GameManagerScript : MonoBehaviour {
 	public StartButtonScript start;
 
 	public void RestartGame() {
-
-		start.gameObject.SetActive (true);
+		Application.LoadLevel (0);
+		/*start.gameObject.SetActive (true);
 		currentLevel = -1;
-
+		lifes = 3;*/
 	}
 
 	public int Protects;
