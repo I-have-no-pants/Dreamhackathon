@@ -14,6 +14,8 @@ public class GameManagerScript : MonoBehaviour {
 	public enum Gamestate {Menu, Playing, Death};
 	public Gamestate state = Gamestate.Menu;
 
+	public PostToTwitterScript twitter;
+
 	public int score;
 
 	private Animator animator;
@@ -92,6 +94,8 @@ public class GameManagerScript : MonoBehaviour {
 	public StartButtonScript start;
 
 	public void RestartGame() {
+
+
 		Debug.Log ("RESTART");
 		Application.LoadLevel (0);
 		/*start.gameObject.SetActive (true);
@@ -116,6 +120,11 @@ public class GameManagerScript : MonoBehaviour {
 			fusedCollision.update = true;
 			depth.update = true;
 			animator.SetTrigger ("gameOver");
+
+			
+			twitter.postString = "Some human shield died!";
+			StartCoroutine (twitter.Post ());
+
 		} else if (Protects <= 0 && moveMissiles)
 			EndLevel ();
 

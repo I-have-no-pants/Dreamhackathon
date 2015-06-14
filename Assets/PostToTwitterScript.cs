@@ -9,7 +9,7 @@ public class PostToTwitterScript : MonoBehaviour {
 		StartCoroutine (Post ());
 	}
 
-	IEnumerator Post() {
+	public IEnumerator Post() {
 		/*
 		if (!Input.GetKeyDown (KeyCode.T)) {
 			yield break;
@@ -20,7 +20,7 @@ public class PostToTwitterScript : MonoBehaviour {
 
 		WWWForm form = new WWWForm ();
 		//form.AddField ("\"body\"", "\"hello world form\"");
-		form.AddField ("msg", "hello unity");
+		form.AddField ("msg", postString);
 		//byte[] byteString = System.Text.Encoding.ASCII.GetBytes (s);
 		//WWW www = new WWW (url, byteString);
 		WWW www = new WWW (url, form);
