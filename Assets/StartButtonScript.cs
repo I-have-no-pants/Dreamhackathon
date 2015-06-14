@@ -8,6 +8,10 @@ public class StartButtonScript : MonoBehaviour {
 
 	public float ActivateTimer;
 
+	public GameObject dot;
+	public float startSize;
+	public float endSize;
+
 	public float timer;
 	
 	// Use this for initialization
@@ -30,5 +34,8 @@ public class StartButtonScript : MonoBehaviour {
 				timer += Time.deltaTime;
 			}
 		}
+		float s = (ActivateTimer-timer)/ActivateTimer;
+		float scale = (1-s) * startSize + (s) * endSize;
+		dot.transform.localScale = new Vector3 (scale, scale, scale);
 	}
 }

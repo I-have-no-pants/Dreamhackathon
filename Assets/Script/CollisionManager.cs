@@ -11,16 +11,6 @@ public class CollisionManager : MonoBehaviour {
 	
 	public int sizeX = 320;
 	public int sizeY = 240;
-	
-	//private Renderer renderer;
-
-	// Use this for initialization
-	void Start () {
-		//renderer = GetComponent<Renderer>();
-		
-		//fused_tex = new Texture2D(sizeX,sizeY,TextureFormat.ARGB32,false);
-		//renderer.material.mainTexture = fused_tex;
-	}
 
 	private void setTextures() {
 		p_tex = player.GetComponent<Renderer> ().material.mainTexture as Texture2D;
@@ -29,22 +19,6 @@ public class CollisionManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		setTextures ();
-
-		//transform.Translate(Vector3.down*Time.deltaTime);
-
-		//Debug.Log("ett "+p_tex.GetPixel(160,120));
-		
-		//Vector2 pixel = getTexturePosition(transform.position);
-
-		//Debug.Log(pixelUV.x+" "+pixelUV.y);
-		//Debug.Log("två "+p_tex.GetPixel((int)pixelUV.x,(int)pixelUV.y));
-		//Color color = p_tex.GetPixel((int)pixel.x,(int)pixel.y);
-		//if (!p_tex.GetPixel((int)pixelUV.x,(int)pixelUV.y).Equals(Color.black))
-		/*if (getCollision(pixel)) {
-			p_tex.SetPixel((int)pixel.x, (int)pixel.y,Color.black);
-			p_tex.Apply();
-			//Destroy(gameObject);
-		}*/
 	}
 
 	public Vector2 getTexturePosition(Vector3 pos) {

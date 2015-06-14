@@ -8,6 +8,7 @@ public class EnemyScript : MonoBehaviour {
 
 	public GameObject explosion;
 	
+
 	// Use this for initialization
 	void Start () {
 		manager = FindObjectOfType<GameManagerScript> ();
