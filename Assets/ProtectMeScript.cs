@@ -39,12 +39,17 @@ public class ProtectMeScript : MonoBehaviour {
 	}
 
 	public void Kill() {
-
+		Debug.Log ("Panda kill");
 		if(explosion)
 			Instantiate (explosion, transform.position, Quaternion.identity);
 		if (manager)
-			manager.Death();
+			manager.Death(true);
 
 		Destroy (gameObject);
+	}
+
+	void OnDestroy() {
+		if (manager)
+			manager.Death ();
 	}
 }

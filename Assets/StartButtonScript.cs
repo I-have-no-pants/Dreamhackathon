@@ -25,7 +25,8 @@ public class StartButtonScript : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			manager.StartLoadingLevel();
-			Destroy(gameObject);
+			gameObject.SetActive(false);
+			//Destroy(gameObject);
 		}
 
 		Vector2 pixel = cm.getTexturePosition(transform.position);

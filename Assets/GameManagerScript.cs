@@ -83,17 +83,46 @@ public class GameManagerScript : MonoBehaviour {
 
 	}
 
+	public int lifes = 3;
+
+	public StartButtonScript start;
+
+	public void RestartGame() {
+
+		start.gameObject.SetActive (true);
+		currentLevel = -1;
+
+	}
+
 	public int Protects;
-	public void Death() {
-		Protects--;
-		if (Protects <= 0)
-			EndLevel ();
+	public void Death(bool killed = false) {
+		if (!moveMissiles)
+			return;
+		if (killed)
+			lifes--;
+		if (lifes <= 0) {
+			fusedImage.gameMode = false;
+			
+			moveMissiles = false;
+			color.update = true;
+			players.update = true;
+			fusedCollision.update = true;
+			depth.update = true;
+			animator.SetTrigger ("gameOver");
+
+		} else {
+
+			Protects--;
+			if (Protects <= 0)
+				EndLevel ();
+
+		}
 
 	}
 
 	public void EnemyDeath() {
 		Enemies--;
-		if (Enemies <= 0)
+		if (Enemies <= 0 && moveMissiles)
 			EndLevel ();
 		
 	}
