@@ -71,10 +71,11 @@ public class GameManagerScript : MonoBehaviour {
 	}
 
 	public void StartLoadingLevel() {
-		currentLevel = (currentLevel + 1) & Levels.Length;
-		Debug.Log ("Load " + Levels [currentLevel]);
+
+		Debug.Log ("Load " + currentLevel + ": "+ Levels [currentLevel]);
 		levels.LoadLevelAdditive (Levels[currentLevel]);
 		animator.SetTrigger ("loadNextLevel");
+		currentLevel = (currentLevel + 1) % Levels.Length;
 	}
 
 	public int Protects;
