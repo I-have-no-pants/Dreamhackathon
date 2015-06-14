@@ -74,8 +74,8 @@ public class GameManagerScript : MonoBehaviour {
 			players.update = true;
 			fusedCollision.update = true;
 			depth.update = true;
-			StartLoadingLevel ();
 			FindObjectOfType<Visualizer>().Next();
+			StartLoadingLevel ();
 		}
 	}
 
@@ -101,11 +101,13 @@ public class GameManagerScript : MonoBehaviour {
 
 	public int Protects;
 	public void Death(bool killed = false) {
-		if (!moveMissiles)
-			return;
+		
 		if (killed)
 			lifes--;
-		if (lifes <= 0) {
+
+		Protects--;
+
+		if (lifes <= 0 && moveMissiles) {
 			fusedImage.gameMode = false;
 			
 			moveMissiles = false;
@@ -114,14 +116,10 @@ public class GameManagerScript : MonoBehaviour {
 			fusedCollision.update = true;
 			depth.update = true;
 			animator.SetTrigger ("gameOver");
+		} else if (Protects <= 0 && moveMissiles)
+			EndLevel ();
 
-		} else {
 
-			Protects--;
-			if (Protects <= 0)
-				EndLevel ();
-
-		}
 
 	}
 

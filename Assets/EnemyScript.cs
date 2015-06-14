@@ -28,10 +28,10 @@ public class EnemyScript : MonoBehaviour {
 
 	public void Explode() {
 		//transform.Translate(Vector3.down*Time.deltaTime);
-		if (cm) {
+		/*if (cm) {
 			Vector2 pixel = cm.getTexturePosition (transform.position);
 			cm.removePixel (pixel, 15);
-		}
+		}*/
 
 		Instantiate (explosion, transform.position, Quaternion.identity);
 
