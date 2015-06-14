@@ -43,7 +43,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108758}
-  m_LocalRotation: {x: 0, y: .70710659, z: 0, w: -.707106948}
+  m_LocalRotation: {x: 0, y: .70710665, z: 0, w: -.707107008}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
@@ -149,13 +149,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 8
   target: {fileID: 0}
-  explosionRadius: 20
-  drillRadius: 10
-  drillLength: 3
+  explosionRadius: 10
+  drillRadius: 5
+  drillLength: 1
   drill: 0
   clusterBomb: 0
   clusterBombChild: 0
-  clusterBombCount: 0
+  clusterBombCount: 4
   ClusterChild: {fileID: 0}
   time: 7
 --- !u!114 &11420210
@@ -242,6 +242,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_StartWidth
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosionRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: drillRadius
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: drillLength
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: clusterBombCount
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
