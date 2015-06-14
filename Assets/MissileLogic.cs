@@ -30,12 +30,20 @@ public class MissileLogic : MonoBehaviour {
 		manager = FindObjectOfType<GameManagerScript> ();
 	}
 
-	
+	bool deleted = false;
+
+	public float time = 7;
+
 	// Update is called once per frame
 	void Update () {
 		//transform.position += speed * transform.right * Time.deltaTime;
 		//transform.Translate (speed * transform.right * Time.deltaTime);
 		if (!manager || manager.moveMissiles) {
+
+			if(deleted) {
+				Destroy(gameObject, time);
+			}
+
 			GetComponent<Rigidbody2D> ().velocity = speed * transform.forward;
 			if (cm) {
 				Vector2 pixel = cm.getTexturePosition (transform.position);
