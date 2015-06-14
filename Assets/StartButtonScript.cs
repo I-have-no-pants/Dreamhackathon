@@ -13,6 +13,8 @@ public class StartButtonScript : MonoBehaviour {
 	public float endSize;
 
 	public float timer;
+
+	public AudioSource gamesound;
 	
 	// Use this for initialization
 	void Start () {
@@ -26,6 +28,7 @@ public class StartButtonScript : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			manager.StartLoadingLevel();
 			gameObject.SetActive(false);
+			gamesound.Play();
 			//Destroy(gameObject);
 		}
 
@@ -35,6 +38,7 @@ public class StartButtonScript : MonoBehaviour {
 				timer -= Time.deltaTime;
 				if (timer<=0) {
 					manager.StartLoadingLevel();
+					gamesound.Play();
 					Destroy(gameObject);
 				}
 			} else if (timer<ActivateTimer) {

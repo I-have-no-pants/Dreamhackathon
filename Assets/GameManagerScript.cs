@@ -58,6 +58,9 @@ public class GameManagerScript : MonoBehaviour {
 		depth.update = false;
 		fusedCollision.update = false;
 		fusedImage.gameMode = true;
+
+		FindObjectOfType<Visualizer>().Next();
+
 	}
 
 	public void EndLevel() {
@@ -72,6 +75,7 @@ public class GameManagerScript : MonoBehaviour {
 			fusedCollision.update = true;
 			depth.update = true;
 			StartLoadingLevel ();
+			FindObjectOfType<Visualizer>().Next();
 		}
 	}
 
@@ -88,6 +92,7 @@ public class GameManagerScript : MonoBehaviour {
 	public StartButtonScript start;
 
 	public void RestartGame() {
+		Debug.Log ("RESTART");
 		Application.LoadLevel (0);
 		/*start.gameObject.SetActive (true);
 		currentLevel = -1;

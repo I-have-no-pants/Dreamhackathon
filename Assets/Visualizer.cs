@@ -16,6 +16,6 @@ public class Visualizer : MonoBehaviour {
 	}
 
 	public void Next() {
-
+		animator.SetTrigger ("next");
 	}
 }

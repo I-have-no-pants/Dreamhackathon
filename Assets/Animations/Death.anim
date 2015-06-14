@@ -625,7 +625,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 1.58333337
+  - time: 1.5
     functionName: RestartGame
     data: 
     objectReferenceParameter: {fileID: 0}
