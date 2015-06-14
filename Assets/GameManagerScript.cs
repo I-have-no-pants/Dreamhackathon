@@ -115,9 +115,11 @@ public class GameManagerScript : MonoBehaviour {
 	public void Death(bool killed = false) {
 		
 		if (killed) {
+			//if (lifes>0 && lifes < 3)
+
 			lifes--;
-			if (lifes>0 && lifes < 3)
-				lifeObjects[lifes].SetActive(false);
+			lifeObjects[lifes].SetActive(false);
+
 		}
 
 		Protects--;
