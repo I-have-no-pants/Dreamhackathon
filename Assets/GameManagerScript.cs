@@ -48,6 +48,7 @@ public class GameManagerScript : MonoBehaviour {
 
 	public string[] Levels;
 	public void NextLevel() {
+
 		//levels.LoadLevelAdditive ("Wave"+currentLevel++);
 		// Activate missiles here
 		Debug.Log ("Activate missiles");
@@ -60,16 +61,18 @@ public class GameManagerScript : MonoBehaviour {
 	}
 
 	public void EndLevel() {
-		levels.UnloadLevelAdditive (Levels[currentLevel]);
+		if (moveMissiles) {
+			//levels.UnloadLevelAdditive (Levels [currentLevel]);
 
-		fusedImage.gameMode = false;
+			fusedImage.gameMode = false;
 		
-		moveMissiles = false;
-		color.update = true;
-		players.update = true;
-		fusedCollision.update = true;
-		depth.update = true;
-		StartLoadingLevel ();
+			moveMissiles = false;
+			color.update = true;
+			players.update = true;
+			fusedCollision.update = true;
+			depth.update = true;
+			StartLoadingLevel ();
+		}
 	}
 
 	public void StartLoadingLevel() {
