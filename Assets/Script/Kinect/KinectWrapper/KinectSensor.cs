@@ -8,8 +8,8 @@ using Kinect;
 
 public class KinectSensor : MonoBehaviour, KinectInterface {
 	//make KinectSensor a singleton (sort of)
-	private static KinectInterface instance;
-    public static KinectInterface Instance
+	private KinectInterface instance;
+    public  KinectInterface Instance
     {
         get
         {
@@ -88,11 +88,11 @@ public class KinectSensor : MonoBehaviour, KinectInterface {
 	
 	void Awake()
 	{
-		if (KinectSensor.instance != null)
+		/*if (KinectSensor.instance != null)
 		{
 			Debug.Log("There should be only one active instance of the KinectSensor component at at time.");
             throw new Exception("There should be only one active instance of the KinectSensor component at a time.");
-		}
+		}*/
 		try
 		{
 			// The MSR Kinect DLL (native code) is going to load into the Unity process and stay resident even between debug runs of the game.  
@@ -138,7 +138,7 @@ public class KinectSensor : MonoBehaviour, KinectInterface {
 			NativeMethods.NuiCameraSetAngle(kinectAngle);
 			
 			DontDestroyOnLoad(gameObject);
-			KinectSensor.Instance = this;
+			Instance = this;
 			NativeMethods.NuiSetDeviceStatusCallback(new NuiStatusProc(), IntPtr.Zero);
 		}
 		

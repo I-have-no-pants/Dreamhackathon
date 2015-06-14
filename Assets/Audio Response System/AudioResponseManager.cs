@@ -130,7 +130,7 @@ public class AudioResponseManager : MonoBehaviour {
 					Debug.LogError("Audio Response Manager does not exist.");
 					return null;
 				}
-				DontDestroyOnLoad(_instance.gameObject);
+				//DontDestroyOnLoad(_instance.gameObject);
 			}
 			return _instance;
 		}
@@ -140,7 +140,7 @@ public class AudioResponseManager : MonoBehaviour {
 		if(_instance == null)
 		{
 			_instance = this;
-			DontDestroyOnLoad(this);
+			//DontDestroyOnLoad(this);
 		} else {
 			if(this != instance) Destroy (this.gameObject);
 		}
