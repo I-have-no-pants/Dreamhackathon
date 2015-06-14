@@ -7,6 +7,9 @@ public class ProtectMeScript : MonoBehaviour {
 	private CollisionManager cm;
 	public int explosionRadius = 20;
 
+	
+	public GameObject explosion;
+
 	// Use this for initialization
 	void Start () {
 		manager = FindObjectOfType<GameManagerScript> ();
@@ -17,7 +20,7 @@ public class ProtectMeScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (cm) {
+		if (cm && manager && manager.moveMissiles) {
 			Vector2 pixel = cm.getTexturePosition(transform.position);
 			if (cm.getCollision(pixel)) {
 				cm.removePixel(pixel,explosionRadius);
@@ -36,8 +39,12 @@ public class ProtectMeScript : MonoBehaviour {
 	}
 
 	public void Kill() {
-		Destroy (gameObject);
+
+		if(explosion)
+			Instantiate (explosion, transform.position, Quaternion.identity);
 		if (manager)
-			manager.Protects--;
+			manager.Death();
+
+		Destroy (gameObject);
 	}
 }

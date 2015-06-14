@@ -60,6 +60,8 @@ public class GameManagerScript : MonoBehaviour {
 	}
 
 	public void EndLevel() {
+		levels.UnloadLevelAdditive (Levels[currentLevel]);
+
 		fusedImage.gameMode = false;
 		
 		moveMissiles = false;
@@ -71,18 +73,18 @@ public class GameManagerScript : MonoBehaviour {
 	}
 
 	public void StartLoadingLevel() {
-
+		currentLevel = (currentLevel + 1) % Levels.Length;
 		Debug.Log ("Load " + currentLevel + ": "+ Levels [currentLevel]);
 		levels.LoadLevelAdditive (Levels[currentLevel]);
 		animator.SetTrigger ("loadNextLevel");
-		currentLevel = (currentLevel + 1) % Levels.Length;
+
 	}
 
 	public int Protects;
 	public void Death() {
 		Protects--;
-		//if (Protects <= 0)
-		//	JumpToEndgame();
+		if (Protects <= 0)
+			EndLevel ();
 
 	}
 
