@@ -27,6 +27,7 @@ public class MissileLogic : MonoBehaviour {
 		if (target) {
 			transform.rotation = Quaternion.LookRotation(target.transform.position - transform.position, new Vector3(1,0,0));
 		}
+		transform.position = new Vector3(transform.position.x,transform.position.y,-1);
 		manager = FindObjectOfType<GameManagerScript> ();
 	}
 
