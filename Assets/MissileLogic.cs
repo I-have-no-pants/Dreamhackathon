@@ -32,7 +32,7 @@ public class MissileLogic : MonoBehaviour {
 
 	bool deleted = false;
 
-	public float time = 7;
+	public float time = 5;
 
 	// Update is called once per frame
 	void Update () {
@@ -40,8 +40,9 @@ public class MissileLogic : MonoBehaviour {
 		//transform.Translate (speed * transform.right * Time.deltaTime);
 		if (!manager || manager.moveMissiles) {
 
-			if(deleted) {
+			if(!deleted) {
 				Destroy(gameObject, time);
+				deleted = true;
 			}
 
 			GetComponent<Rigidbody2D> ().velocity = speed * transform.forward;

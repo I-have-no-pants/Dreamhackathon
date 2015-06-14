@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionRadius: 20
-  explosion: {fileID: 174650, guid: df3f31c51573c524f8fa1349bda64441, type: 2}
+  explosion: {fileID: 100008, guid: abece2cac151f3f4f879a3a5108c5ab8, type: 2}
 --- !u!212 &21243606
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -234,7 +234,7 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: explosion
       value: 
-      objectReference: {fileID: 174650, guid: df3f31c51573c524f8fa1349bda64441, type: 2}
+      objectReference: {fileID: 100008, guid: abece2cac151f3f4f879a3a5108c5ab8, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 135860}
