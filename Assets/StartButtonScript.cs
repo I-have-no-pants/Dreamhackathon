@@ -39,7 +39,7 @@ public class StartButtonScript : MonoBehaviour {
 				if (timer<=0) {
 					manager.StartLoadingLevel();
 					gamesound.Play();
-					Destroy(gameObject);
+					gameObject.SetActive(false);
 				}
 			} else if (timer<ActivateTimer) {
 				timer += Time.deltaTime;
