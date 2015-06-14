@@ -138,6 +138,22 @@ Prefab:
       propertyPath: myLevel
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBomb
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drillLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBombCount
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
@@ -190,6 +206,22 @@ Prefab:
       objectReference: {fileID: 823196246}
     - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: myLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBomb
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drillLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBombCount
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -290,6 +322,22 @@ Prefab:
       objectReference: {fileID: 1850903193}
     - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: myLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBomb
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drillLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBombCount
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -498,6 +546,22 @@ Prefab:
       objectReference: {fileID: 823196246}
     - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: myLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBomb
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: drillLength
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11403754, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: clusterBombCount
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
