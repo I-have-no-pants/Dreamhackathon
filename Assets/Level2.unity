@@ -196,7 +196,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469804, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.81999993
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 469804, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -220,7 +220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469804, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 146568, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_Name
@@ -242,7 +242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469804, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.93000007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 469804, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -266,7 +266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469804, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 146568, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_Name
@@ -364,7 +364,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1001 &1063110750
 Prefab:
   m_ObjectHideFlags: 0
@@ -528,7 +528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445294, guid: 6aead570fbc3485429da0543b1f89a9d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.80999994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 445294, guid: 6aead570fbc3485429da0543b1f89a9d, type: 2}
       propertyPath: m_LocalPosition.z
@@ -552,7 +552,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 445294, guid: 6aead570fbc3485429da0543b1f89a9d, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aead570fbc3485429da0543b1f89a9d, type: 2}
