@@ -4274,7 +4274,7 @@ MonoBehaviour:
   - Level4
   - Level5
   - Level6
-  lifes: 3
+  lifes: 90
   start: {fileID: 0}
   Protects: 0
 --- !u!4 &1615363743
