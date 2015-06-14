@@ -5,8 +5,8 @@ public class MissileLogic : MonoBehaviour {
 	public float speed;
 
 	private CollisionManager cm;
+	public Transform target;
 
-	public bool Homing = true;
 
 	private GameManagerScript manager;
 
@@ -24,8 +24,7 @@ public class MissileLogic : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cm = FindObjectOfType<CollisionManager>();
-		if (Homing) {
-			ProtectMeScript target = FindObjectOfType<ProtectMeScript>();
+		if (target) {
 			transform.rotation = Quaternion.LookRotation(target.transform.position - transform.position, new Vector3(1,0,0));
 		}
 		manager = FindObjectOfType<GameManagerScript> ();
