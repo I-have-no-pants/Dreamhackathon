@@ -43,7 +43,7 @@ public class ProtectMeScript : MonoBehaviour {
 		if(explosion)
 			Instantiate (explosion, transform.position, Quaternion.identity);
 		if (manager)
-			manager.Death();
+			manager.Death(true);
 
 		Destroy (gameObject);
 	}

@@ -85,13 +85,21 @@ public class GameManagerScript : MonoBehaviour {
 
 	public int lifes = 3;
 
+	public StartButtonScript start;
+
 	public void RestartGame() {
-		Application.LoadLevel (0);
+
+		start.gameObject.SetActive (true);
+		currentLevel = -1;
+
 	}
 
 	public int Protects;
 	public void Death(bool killed = false) {
-
+		if (!moveMissiles)
+			return;
+		if (killed)
+			lifes--;
 		if (lifes <= 0) {
 			fusedImage.gameMode = false;
 			
@@ -114,7 +122,7 @@ public class GameManagerScript : MonoBehaviour {
 
 	public void EnemyDeath() {
 		Enemies--;
-		if (Enemies <= 0)
+		if (Enemies <= 0 && moveMissiles)
 			EndLevel ();
 		
 	}
