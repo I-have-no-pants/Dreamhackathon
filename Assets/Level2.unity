@@ -134,6 +134,10 @@ Prefab:
       propertyPath: m_Name
       value: Missile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
@@ -180,6 +184,10 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1850976306}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
@@ -226,6 +234,10 @@ Prefab:
       propertyPath: m_Name
       value: Arrow (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 11453856, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
+      propertyPath: myLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
   m_IsPrefabParent: 0
@@ -271,6 +283,10 @@ Prefab:
     - target: {fileID: 146568, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
       propertyPath: m_Name
       value: Arrow (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11453856, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
+      propertyPath: myLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2d9c51249fb2534783230809e2969c1, type: 2}
@@ -322,49 +338,13 @@ Prefab:
       propertyPath: m_Name
       value: Missile (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &943442983
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 943442985}
-  - 114: {fileID: 943442984}
-  m_Layer: 0
-  m_Name: SceneName
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &943442984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 943442983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dbc9ec9f286ce24ebc1d4d67e4b94b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Level2
---- !u!4 &943442985
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 943442983}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
 --- !u!1001 &1063110750
 Prefab:
   m_ObjectHideFlags: 0
@@ -411,6 +391,10 @@ Prefab:
     - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: m_Name
       value: Missile (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
@@ -462,6 +446,10 @@ Prefab:
       propertyPath: m_Name
       value: Missile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
@@ -512,6 +500,10 @@ Prefab:
       propertyPath: m_Name
       value: Missile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
   m_IsPrefabParent: 0
@@ -553,6 +545,10 @@ Prefab:
     - target: {fileID: 445294, guid: 6aead570fbc3485429da0543b1f89a9d, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11450534, guid: 6aead570fbc3485429da0543b1f89a9d, type: 2}
+      propertyPath: myLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6aead570fbc3485429da0543b1f89a9d, type: 2}
@@ -603,6 +599,10 @@ Prefab:
     - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: m_Name
       value: Missile (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
@@ -657,6 +657,10 @@ Prefab:
     - target: {fileID: 174626, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
       propertyPath: m_Name
       value: Missile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426032, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
+      propertyPath: myLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aff1ff01313ef374c9b655f6084eb3eb, type: 2}
