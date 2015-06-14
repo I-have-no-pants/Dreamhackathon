@@ -25,12 +25,12 @@ public class StartButtonScript : MonoBehaviour {
 
 	void Update () {
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
+		/*if (Input.GetKeyDown (KeyCode.Space)) {
 			manager.StartLoadingLevel();
 			gameObject.SetActive(false);
 			gamesound.Play();
 			//Destroy(gameObject);
-		}
+		}*/
 
 		Vector2 pixel = cm.getTexturePosition(transform.position);
 		if (pixel.x != 0 || pixel.y != 0) {

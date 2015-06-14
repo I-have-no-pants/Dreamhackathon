@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class GameManagerScript : MonoBehaviour {
+
+	public GameObject[] lifeObjects;
 
 	public DisplayColor color;
 	public DisplayPlayers players;
@@ -13,6 +16,8 @@ public class GameManagerScript : MonoBehaviour {
 
 	public enum Gamestate {Menu, Playing, Death};
 	public Gamestate state = Gamestate.Menu;
+
+	public PostToTwitterScript twitter;
 
 	public int score;
 
@@ -65,6 +70,7 @@ public class GameManagerScript : MonoBehaviour {
 
 	public void EndLevel() {
 		if (moveMissiles) {
+			finishedLevels++;
 			//levels.UnloadLevelAdditive (Levels [currentLevel]);
 
 			fusedImage.gameMode = false;
@@ -92,6 +98,8 @@ public class GameManagerScript : MonoBehaviour {
 	public StartButtonScript start;
 
 	public void RestartGame() {
+
+
 		Debug.Log ("RESTART");
 		Application.LoadLevel (0);
 		/*start.gameObject.SetActive (true);
@@ -99,11 +107,18 @@ public class GameManagerScript : MonoBehaviour {
 		lifes = 3;*/
 	}
 
+	public InputField name;
+
+	public int finishedLevels;
+
 	public int Protects;
 	public void Death(bool killed = false) {
 		
-		if (killed)
+		if (killed) {
 			lifes--;
+			if (lifes>0)
+				lifeObjects[lifes].SetActive(false);
+		}
 
 		Protects--;
 
@@ -116,6 +131,13 @@ public class GameManagerScript : MonoBehaviour {
 			fusedCollision.update = true;
 			depth.update = true;
 			animator.SetTrigger ("gameOver");
+
+			
+			twitter.postString = name.text + " reached level " + finishedLevels + " in Human Shield #dreamhackathon";
+
+			Debug.Log(twitter.postString);
+			StartCoroutine (twitter.Post ());
+
 		} else if (Protects <= 0 && moveMissiles)
 			EndLevel ();
 
