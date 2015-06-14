@@ -27,7 +27,6 @@ GameObject:
   - 4: {fileID: 445294}
   - 114: {fileID: 11459060}
   - 58: {fileID: 5831484}
-  - 114: {fileID: 11496650}
   - 114: {fileID: 11450534}
   m_Layer: 0
   m_Name: Panda
@@ -169,17 +168,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionRadius: 20
   explosion: {fileID: 174650, guid: df3f31c51573c524f8fa1349bda64441, type: 2}
---- !u!114 &11496650
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 135860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 023c72b25cb9cb74492c58d949321afd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &21243606
 SpriteRenderer:
   m_ObjectHideFlags: 1
