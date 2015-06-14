@@ -16,6 +16,8 @@ public class ImageFuser : MonoBehaviour {
 	public int sizeX = 320;
 	public int sizeY = 240;
 	public int displayDepth = 126;
+
+	public int moveBack = 0;
 	
 	private Renderer renderer;
 
@@ -40,22 +42,30 @@ public class ImageFuser : MonoBehaviour {
 		Color32[] p_t = p_tex.GetPixels32 ();
 		Color32[] c_t = c_tex.GetPixels32 ();
 		Color32[] d_t = d_tex.GetPixels32 ();
-
+		moveBack = 0;
 		for (int pix = 0; pix < img.Length; pix++)
 		{
 			int x = pix %sizeX;
 			int y = pix /sizeX;
-			if ((p_t[pix].r == 0 && p_t[pix].g == 0 && p_t[pix].b == 0) || d_t[pix].r < displayDepth) {
+			if ((p_t[pix].r == 0 && p_t[pix].g == 0 && p_t[pix].b == 0)) {
 				
 				img[pix].r = 0;
 				img[pix].g = 0;
 				img[pix].b = 0;
 				img[pix].a = 0;
 			} else {
-				img[pix].r = p_t[pix].r;
-				img[pix].g = p_t[pix].g;
-				img[pix].b = p_t[pix].b;
-				img[pix].a = 255;
+				if ( d_t[pix].r > displayDepth) {
+					img[pix].r = p_t[pix].r;
+					img[pix].g = p_t[pix].g;
+					img[pix].b = p_t[pix].b;
+					img[pix].a = 255;
+					moveBack++;
+				} else {
+					img[pix].r = 128;
+					img[pix].g = 128;
+					img[pix].b = 128;
+					img[pix].a = 128;
+				}
 
 			}
 		}
