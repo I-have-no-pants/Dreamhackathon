@@ -9,7 +9,8 @@ public class SizeAudioResponse : GenericAudioResponse {
 
 	void Awake () {
 		defaultScale = transform.localScale;
-		audioSource = GameObject.Find ("Music").GetComponent<AudioSource> ();
+		if (!audioSource)
+			audioSource = GameObject.Find ("Music").GetComponent<AudioSource> ();
 	}
 
 	void Update () {

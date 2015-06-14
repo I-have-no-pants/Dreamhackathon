@@ -27,3 +27,9 @@ EditorBuildSettings:
     path: Assets/Level2.unity
   - enabled: 1
     path: Assets/Level1.unity
+  - enabled: 1
+    path: Assets/EasyLevel2.unity
+  - enabled: 1
+    path: Assets/EasyLevel3.unity
+  - enabled: 1
+    path: Assets/EasyLevel4.unity
