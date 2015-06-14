@@ -13,6 +13,10 @@ public class ImageFuser : MonoBehaviour {
 	private Texture2D p_tex;
 	private Texture2D f_tex;
 
+	public Texture2D rainbow;
+	private float rainbowCounter;
+	
+
 	private Texture2D fused_tex;
 
 	public int sizeX = 320;
@@ -42,6 +46,9 @@ public class ImageFuser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		rainbowCounter += Time.deltaTime;
+
 		setTextures ();
 		Color32[] img = new Color32[sizeX*sizeY];
 		Color32[] p_t;
@@ -66,9 +73,12 @@ public class ImageFuser : MonoBehaviour {
 				img[pix].a = 0;
 			} else {
 				if ( d_t[pix].r > displayDepth) {
-					img[pix].r = p_t[pix].r;
+					/*img[pix].r = p_t[pix].r;
 					img[pix].g = p_t[pix].g;
-					img[pix].b = p_t[pix].b;
+					img[pix].b = p_t[pix].b;*/
+
+					img[pix] = rainbow.GetPixel((int)rainbowCounter, 1);
+
 					img[pix].a = 255;
 					moveBack++;
 				} else {

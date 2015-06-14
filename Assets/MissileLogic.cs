@@ -31,8 +31,7 @@ public class MissileLogic : MonoBehaviour {
 				Vector2 pixel = cm.getTexturePosition (transform.position);
 				if (pixel.x != 0 || pixel.y != 0) {
 					if (cm.getCollision (pixel)) {
-						cm.removePixel (pixel, 20);
-						Destroy (gameObject);
+						GetComponent<EnemyScript>().Explode();
 					}
 				}
 			}

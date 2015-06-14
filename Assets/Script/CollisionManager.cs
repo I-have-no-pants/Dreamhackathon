@@ -59,6 +59,7 @@ public class CollisionManager : MonoBehaviour {
 		
 		//Texture2D tex = rend.material.mainTexture as Texture2D;
 		Vector2 pixelUV = hit.textureCoord;
+		Debug.Log (pixelUV);
 		pixelUV.x *= sizeX;
 		pixelUV.y *= sizeY;
 		return pixelUV;

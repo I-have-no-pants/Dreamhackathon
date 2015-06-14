@@ -5,6 +5,8 @@ public class EnemyScript : MonoBehaviour {
 
 	private CollisionManager cm;
 	private GameManagerScript manager;
+
+	public GameObject explosion;
 	
 	// Use this for initialization
 	void Start () {
@@ -24,11 +26,14 @@ public class EnemyScript : MonoBehaviour {
 
 
 	public void Explode() {
-		transform.Translate(Vector3.down*Time.deltaTime);
+		//transform.Translate(Vector3.down*Time.deltaTime);
 		if (cm) {
 			Vector2 pixel = cm.getTexturePosition (transform.position);
 			cm.removePixel (pixel, 15);
 		}
+
+		Instantiate (explosion, transform.position, Quaternion.identity);
+
 		Destroy (gameObject);
 	}
 }
