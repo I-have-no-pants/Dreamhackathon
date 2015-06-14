@@ -34,7 +34,7 @@ GameObject:
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 174626}
   m_LocalRotation: {x: 0, y: 0, z: -.267426342, w: .963578343}
-  m_LocalPosition: {x: 4.99744558, y: .797806263, z: 1.81812668}
+  m_LocalPosition: {x: -8.55700016, y: 3.05900002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470606}
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  Homing: 1
+  target: {fileID: 0}
   explosionRadius: 20
   drillRadius: 10
   drillLength: 3
