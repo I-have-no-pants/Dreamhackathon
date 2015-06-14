@@ -44,7 +44,9 @@ public class GameManagerScript : MonoBehaviour {
 	}
 
 
-	public int currentLevel=1;
+	public int currentLevel=0;
+
+	public string[] Levels;
 	public void NextLevel() {
 		//levels.LoadLevelAdditive ("Wave"+currentLevel++);
 		// Activate missiles here
@@ -69,7 +71,8 @@ public class GameManagerScript : MonoBehaviour {
 	}
 
 	public void StartLoadingLevel() {
-		levels.LoadLevelAdditive ("Wave"+currentLevel++);
+		currentLevel = (currentLevel + 1) & Levels.Length;
+		levels.LoadLevelAdditive (Levels[currentLevel]);
 		animator.SetTrigger ("loadNextLevel");
 	}
 
