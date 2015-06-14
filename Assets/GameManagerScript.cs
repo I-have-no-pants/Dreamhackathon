@@ -83,11 +83,32 @@ public class GameManagerScript : MonoBehaviour {
 
 	}
 
+	public int lifes = 3;
+
+	public void RestartGame() {
+		Application.LoadLevel (0);
+	}
+
 	public int Protects;
-	public void Death() {
-		Protects--;
-		if (Protects <= 0)
-			EndLevel ();
+	public void Death(bool killed = false) {
+
+		if (lifes <= 0) {
+			fusedImage.gameMode = false;
+			
+			moveMissiles = false;
+			color.update = true;
+			players.update = true;
+			fusedCollision.update = true;
+			depth.update = true;
+			animator.SetTrigger ("gameOver");
+
+		} else {
+
+			Protects--;
+			if (Protects <= 0)
+				EndLevel ();
+
+		}
 
 	}
 
