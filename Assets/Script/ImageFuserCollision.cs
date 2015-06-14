@@ -18,6 +18,8 @@ public class ImageFuserCollision : MonoBehaviour {
 	public int displayDepth = 82;
 	
 	private Renderer renderer;
+	public bool update = true;
+	
 	
 	// Use this for initialization
 	void Start () {
@@ -35,6 +37,8 @@ public class ImageFuserCollision : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!update)
+			return;
 		setTextures ();
 		Color32[] img = new Color32[sizeX*sizeY];
 		Color32[] p_t = p_tex.GetPixels32 ();

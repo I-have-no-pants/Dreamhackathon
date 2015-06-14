@@ -6,6 +6,8 @@ public class GameManagerScript : MonoBehaviour {
 	public DisplayColor color;
 	public DisplayPlayers players;
 	public DisplayDepth depth;
+	public ImageFuserCollision fusedCollision;
+	public ImageFuser fusedImage;
 
 	public LevelManagerScript levels;
 
@@ -51,12 +53,17 @@ public class GameManagerScript : MonoBehaviour {
 		color.update = false;
 		players.update = false;
 		depth.update = false;
+		fusedCollision.update = false;
+		fusedImage.gameMode = true;
 	}
 
 	public void EndLevel() {
+		fusedImage.gameMode = false;
+		
 		moveMissiles = false;
 		color.update = true;
 		players.update = true;
+		fusedCollision.update = true;
 		depth.update = true;
 		StartLoadingLevel ();
 	}

@@ -6,10 +6,12 @@ public class ImageFuser : MonoBehaviour {
 	public Renderer depth;
 	public Renderer color;
 	public Renderer player;
+	public Renderer playerFuse;
 
 	private Texture2D d_tex;
 	private Texture2D c_tex;
 	private Texture2D p_tex;
+	private Texture2D f_tex;
 
 	private Texture2D fused_tex;
 
@@ -18,6 +20,8 @@ public class ImageFuser : MonoBehaviour {
 	public int displayDepth = 126;
 
 	public int moveBack = 0;
+
+	public bool gameMode;
 	
 	private Renderer renderer;
 
@@ -33,13 +37,20 @@ public class ImageFuser : MonoBehaviour {
 		d_tex = depth.GetComponent<Renderer> ().material.mainTexture as Texture2D;
 		c_tex = color.GetComponent<Renderer> ().material.mainTexture as Texture2D;
 		p_tex = player.GetComponent<Renderer> ().material.mainTexture as Texture2D;
+		f_tex = playerFuse.GetComponent<Renderer> ().material.mainTexture as Texture2D;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		setTextures ();
 		Color32[] img = new Color32[sizeX*sizeY];
-		Color32[] p_t = p_tex.GetPixels32 ();
+		Color32[] p_t;
+		if (!gameMode)
+			p_t = p_tex.GetPixels32 ();
+		else
+			p_t = f_tex.GetPixels32 ();
+			
+
 		Color32[] c_t = c_tex.GetPixels32 ();
 		Color32[] d_t = d_tex.GetPixels32 ();
 		moveBack = 0;
